@@ -1,0 +1,23 @@
+if ∗:
+    x = 1
+    l = [2, x]
+elif ∗:
+    x = "a"
+    l = [x, "bla"]
+else:
+    x = [1]
+    l = [x, [2, 3]]
+if isinstance(x, int):
+    y = True
+elif isinstance(x, str):
+    y = "True"
+else:
+    y=x
+t=y
+
+# Trigger
+# TODO
+'''
+rr.py:1: error: invalid syntax
+Found 1 error in 1 file (checked 1 source file)
+'''
