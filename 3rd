@@ -1,0 +1,12 @@
+class A:
+    def __init__(self, x=1):
+        pass
+def f(A):
+    x = A()
+    y = A(1)
+f(A)
+x = A()
+y = A(1)
+'''
+Success: no issues found in 1 source file
+'''
