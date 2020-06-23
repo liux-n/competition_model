@@ -13,3 +13,30 @@ Found 1 error in 1 file (checked 925 source files)
 
 mypyc是一个编译器，它将mypy注释的、静态类型的python模块编译为CPython C扩展。目前我们主要关注的是通过编译可以使得mypy更快，已编译的mypy比未编译的mypy快4倍，但是目前对于一般的Python开发，mypyc在很大程度上还不是很有用
 虽然mypy是一个比较新的事物，可以本身还存在bug，以及它对一些处理不了的类型问题会直接ignore,但整体来看未来可期。
+
+e type as "Type[HTTP11DownloadHandler]")
+D:\scrapy-master\tests\test_downloader_handlers.py:797: error: Cannot find implementation or library stub for module named 'botocore.auth'
+D:\scrapy-master\tests\test_downloader_handlers.py:797: error: Cannot find implementation or library stub for module named 'botocore'
+D:\scrapy-master\tests\test_downloader_handlers.py:940: error: Cannot find implementation or library stub for module named 'twisted.protocols.ftp'
+D:\scrapy-master\tests\test_downloader_handlers.py:1052: error: Need type annotation for 'req_meta' (hint: "req_meta: Dict[<type>, <type>] = ...")
+D:\scrapy-master\tests\test_crawl.py:8: error: Skipping analyzing 'pytest': found module but no type hints or library stubs
+D:\scrapy-master\tests\test_crawl.py:9: error: Cannot find implementation or library stub for module named 'testfixtures'
+D:\scrapy-master\tests\test_crawl.py:10: error: Cannot find implementation or library stub for module named 'twisted.internet'
+D:\scrapy-master\tests\test_crawl.py:11: error: Cannot find implementation or library stub for module named 'twisted.internet.ssl'
+D:\scrapy-master\tests\test_crawl.py:12: error: Cannot find implementation or library stub for module named 'twisted.python.failure'
+D:\scrapy-master\tests\test_crawl.py:13: error: Cannot find implementation or library stub for module named 'twisted.trial.unittest'
+D:\scrapy-master\tests\test_crawl.py:387: error: Skipping analyzing 'tests.py36._test_crawl': found module but no type hints or library stubs
+D:\scrapy-master\tests\test_contracts.py:3: error: Cannot find implementation or library stub for module named 'twisted.internet'
+D:\scrapy-master\tests\test_contracts.py:4: error: Cannot find implementation or library stub for module named 'twisted.python'
+D:\scrapy-master\tests\test_contracts.py:5: error: Cannot find implementation or library stub for module named 'twisted.trial'
+D:\scrapy-master\tests\test_contracts.py:49: error: Incompatible types in assignment (expression has type "Type[FormRequest]", base class "Contract" defined the type as "None")
+D:\scrapy-master\tests\test_contracts.py:57: error: Incompatible types in assignment (expression has type "str", base class "Spider" defined the type as "None")
+D:\scrapy-master\tests\test_contracts.py:180: error: Incompatible types in assignment (expression has type "str", base class "Spider" defined the type as "None")
+D:\scrapy-master\tests\test_contracts.py:190: error: Incompatible types in assignment (expression has type "str", base class "Spider" defined the type as "None")
+D:\scrapy-master\tests\test_commands.py:14: error: Cannot find implementation or library stub for module named 'twisted.trial'
+D:\scrapy-master\tests\test_closespider.py:1: error: Cannot find implementation or library stub for module named 'twisted.internet'
+D:\scrapy-master\tests\test_closespider.py:2: error: Cannot find implementation or library stub for module named 'twisted.trial.unittest'
+D:\scrapy-master\tests\test_command_parse.py:3: error: Cannot find implementation or library stub for module named 'twisted.internet'
+D:\scrapy-master\tests\test_command_parse.py:17: error: Incompatible types in assignment (expression has type "str", base class "ProcessTest" defined the type as "None")
+Found 530 errors in 1 file (checked 295 source files)
+
