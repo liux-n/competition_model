@@ -1,8 +1,15 @@
 Mypy is an optional static type checker for Python. You can add type hints (PEP 484) to your Python programs, and use mypy to type check them statically. Find bugs in your programs without even running them!
 
 You can mix dynamic and static typing in your programs. You can always fall back to dynamic typing when static typing is not convenient, such as for legacy code.
-10 March 2020: Mypy 0.770 was released. This release includes various fixes and improvements and improved type inference in some cases. Read the blog post for the details. -Michael J. Sullivan
+10 March 2020: Mypy 0.770 was released. This release includes various fixes and improvements and improved type inference in some cases. 
 
 Mypy type checks programs that have type annotations conforming to PEP 484
 
-特点：主要利用类型标注来做类型检查
+特点：主要利用类型标注来做类型检查，必须要由开发者在开发时按照规范（PEP 484）加上类型标注。
+mypy需要python3.5及更新的版本来运行，本身我们对于python的版本的更新换代接受就比较慢，mypy的应用普及也会更慢些。现有的开源大型项目有不少没有添加类型标注，不能用mypy检查 
+(base) C:\Users\liuxi>mypy D:\anaconda\envs\project1\Lib
+D:\anaconda\envs\project1\Lib\collections\__init__.py:96: error: invalid syntax
+Found 1 error in 1 file (checked 925 source files)
+
+mypyc是一个编译器，它将mypy注释的、静态类型的python模块编译为CPython C扩展。目前我们主要关注的是通过编译可以使得mypy更快，已编译的mypy比未编译的mypy快4倍，但是目前对于一般的Python开发，mypyc在很大程度上还不是很有用
+虽然mypy是一个比较新的事物，可以本身还存在bug，以及它对一些处理不了的类型问题会直接ignore,但整体来看未来可期。
