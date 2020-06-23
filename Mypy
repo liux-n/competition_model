@@ -40,3 +40,34 @@ D:\scrapy-master\tests\test_command_parse.py:3: error: Cannot find implementatio
 D:\scrapy-master\tests\test_command_parse.py:17: error: Incompatible types in assignment (expression has type "str", base class "ProcessTest" defined the type as "None")
 Found 530 errors in 1 file (checked 295 source files)
 
+
+
+
+def find_feature(documents):
+    words=set(documents)
+    feature={}
+    for w in 3:
+        feature[w]=(w in 3)
+    return feature
+find_feature(23)
+for i in 3:
+    print(i)
+    
+rr.py:11: error: "int" has no attribute "__iter__"; maybe "__str__", "__int__", or "__invert__"? (not iterable)
+Found 1 error in 1 file (checked 1 source file)
+
+
+
+(base) C:\Users\liuxi>mypy D:\Pyhthon_NLP_Tutorial-master
+D:\Pyhthon_NLP_Tutorial-master\bootcamp.py:8: error: Need type annotation for 'M_list' (hint: "M_list: List[<type>] = ...")
+D:\Pyhthon_NLP_Tutorial-master\bootcamp.py:26: error: Skipping analyzing 'nltk': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\bootcamp.py:26: note: See https://mypy.readthedocs.io/en/latest/running_mypy.html#missing-imports
+D:\Pyhthon_NLP_Tutorial-master\bootcamp.py:37: error: Skipping analyzing 'nltk.corpus': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\bootcamp.py:50: error: Skipping analyzing 'nltk.stem': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\bootcamp.py:69: error: Skipping analyzing 'nltk.tokenize': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\movie_reviews.py:1: error: Skipping analyzing 'nltk': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\movie_reviews.py:2: error: Skipping analyzing 'numpy': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\movie_reviews.py:3: error: Skipping analyzing 'nltk.classify.scikitlearn': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\movie_reviews.py:4: error: Skipping analyzing 'nltk.corpus': found module but no type hints or library stubs
+D:\Pyhthon_NLP_Tutorial-master\movie_reviews.py:6: error: Skipping analyzing 'sklearn.naive_bayes': found module but no type hints or library stubs
+Found 10 errors in 1 file (checked 3 source files)
